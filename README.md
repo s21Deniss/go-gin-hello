@@ -13,6 +13,11 @@ This application is made to lab hashicorp consul
 * "/setFail" : `sets status to fail and return 503 from /health`
 
 
+# Running localy
+
+fetch modules : `go get -d -v`
+run : `go run main.go`
+
 # Docker image
 
 Building your self : `docker build -t 'selfbuild/go-gin-hello'`
