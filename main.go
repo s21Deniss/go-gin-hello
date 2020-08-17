@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -14,7 +15,7 @@ func main() {
 	port := os.Getenv("PORT")
 	isOK := true
 
-	if port == "" {
+	if port == "" || !isNumeric(port) {
 		port = "8080"
 		log.Printf("Defaulting to port %s", port)
 	}
@@ -66,4 +67,9 @@ func main() {
 	// Listen and serve on defined port
 	log.Printf("Listening on port %s", port)
 	router.Run(":" + port)
+}
+
+func isNumeric(s string) bool {
+	_, err := strconv.ParseFloat(s, 64)
+	return err == nil
 }
