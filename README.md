@@ -20,6 +20,6 @@ run : `go run main.go`
 
 # Docker image
 
-Building your self : `docker build -t 'selfbuild/go-gin-hello'`
+Building your self : `docker build -t 'selfbuild/go-gin-hello' .`
 
 Pull from dockerhub : `docker pull s21deniss/go-gin-hello`
