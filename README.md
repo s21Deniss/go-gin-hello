@@ -2,6 +2,8 @@
 
 This application is made to lab hashicorp consul
 
+Can change app port by setting env variable PORT to desired port `export PORT=8181`
+
 ## Routes
 
 * 	"/" : `prints "Hello World!"`
@@ -23,3 +25,6 @@ run : `go run main.go`
 Building your self : `docker build -t 'selfbuild/go-gin-hello' .`
 
 Pull from dockerhub : `docker pull s21deniss/go-gin-hello`
+
+Run it : `docker run -p 8181:8181 -e PORT=8181 s21deniss/go-gin-hello`
+
