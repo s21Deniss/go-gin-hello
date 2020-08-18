@@ -35,3 +35,6 @@ Start it
 
 Run it : `docker run -p 8181:8181 -e PORT=8181 s21deniss/go-gin-hello`
 
+---
+To register in consul you should have consul cli installed/configured
+Register in consul ` make consul grepSearch=s21deniss/go-gin-hello `

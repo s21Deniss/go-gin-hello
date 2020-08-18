@@ -1,0 +1,17 @@
+{
+  "service": {
+    "name": "go-gin-hello",
+    "tags": [
+      "go"
+    ],
+    "port": 8080,
+    "check": {
+      "id": "hello-check",
+      "name": "HTTP API on port 8080",
+      "http": "http://dummyIP:8080/health",
+      "method": "GET",
+      "interval": "3s",
+      "timeout": "1s"
+    }
+  }
+}
